@@ -18,7 +18,8 @@ Step-4 : Predict the required output.
 Program to implement the SVM For Spam Mail Detection..
 Developed by: CHANDRAPRIYADHARSHINI C
 RegisterNumber:  212223240019
-
+```
+```
 import pandas as pd
 data=pd.read_csv("/content/spam.csv",encoding='Windows-1252')
 data.head()
