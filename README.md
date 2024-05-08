@@ -58,7 +58,8 @@ print(cl)
 ## Output:
 
 ### Data
-![image](https://github.com/Bosevennila/Implementation-of-SVM-For-Spam-Mail-Detection/assets/144870486/5a5d0c80-e8c1-4cff-9105-4c8a688c6e6b)
+![image](https://github.com/Bosevennila/Implementation-of-SVM-For-Spam-Mail-Detection/assets/144870486/797d9100-b85e-405d-bfa5-8f9b7f1cb269)
+![image](https://github.com/Bosevennila/Implementation-of-SVM-For-Spam-Mail-Detection/assets/144870486/01e57a00-82c6-45c7-90c3-97c12cd742bc)
 
 ### Data.shape
 ![image](https://github.com/Bosevennila/Implementation-of-SVM-For-Spam-Mail-Detection/assets/144870486/11200aa0-1b4a-4b20-a775-1312edadcaae)
