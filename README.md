@@ -8,9 +8,13 @@ To write a program to implement the SVM For Spam Mail Detection.
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
+
 Step-1 : Import the required packages.
+
 Step-2 : Import the dataset to operate on.
+
 Step-3 : Split the dataset.
+
 Step-4 : Predict the required output. 
 
 ## Program:
@@ -22,14 +26,16 @@ RegisterNumber:  212223240019
 ```
 import pandas as pd
 data=pd.read_csv("/content/spam.csv",encoding='Windows-1252')
-data.head()
-data.info()
-data.tail()
-data.isnull().sum()
-x=data['v1'].values
-y=data['v2'].values
 from sklearn.model_selection import train_test_split
-x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=0)
+data
+data.shape
+x=data['v2'].values
+y=data['v1'].values
+x.shape
+y.shape
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.35,random_state=0)
+x_train
+x_train.shape
 from sklearn.feature_extraction.text import CountVectorizer
 cv=CountVectorizer()
 x_train=cv.fit_transform(x_train)
@@ -39,30 +45,19 @@ svc=SVC()
 svc.fit(x_train,y_train)
 y_pred=svc.predict(x_test)
 y_pred
-from sklearn import metrics
-accuracy=metrics.accuracy_score(y_test,y_pred)
-accuracy
+from sklearn.metrics import accuracy_score,confusion_matrix,classification_report
+acc=accuracy_score(y_test,y_pred)
+acc
+con=confusion_matrix(y_test,y_pred)
+print(con)
+cl=classification_report(y_test,y_pred)
+print(cl)
 ```
-
 ## Output:
 
-data.head()
-![image](https://github.com/Bosevennila/Implementation-of-SVM-For-Spam-Mail-Detection/assets/144870486/1bb3899c-3dd8-4bb7-a7d2-cd264fb7953a)
+### data
+![image](https://github.com/Bosevennila/Implementation-of-SVM-For-Spam-Mail-Detection/assets/144870486/5a5d0c80-e8c1-4cff-9105-4c8a688c6e6b)
 
-data.info()
-![image](https://github.com/Bosevennila/Implementation-of-SVM-For-Spam-Mail-Detection/assets/144870486/aff70fd5-c06a-4dfe-ae72-97b7c583dbc3)
-
-data.tail()
-![image](https://github.com/Bosevennila/Implementation-of-SVM-For-Spam-Mail-Detection/assets/144870486/8185c7cb-53a4-4d50-a3c5-dbcea6a5faf3)
-
-data.isnull().sum()
-![image](https://github.com/Bosevennila/Implementation-of-SVM-For-Spam-Mail-Detection/assets/144870486/45fb4e71-7231-4a3c-ac41-6f91095c2392)
-
-y_pred
-![image](https://github.com/Bosevennila/Implementation-of-SVM-For-Spam-Mail-Detection/assets/144870486/bfa86388-0e87-4c56-8a66-ecbc5f67b56e)
-
-Accuracy
-![image](https://github.com/Bosevennila/Implementation-of-SVM-For-Spam-Mail-Detection/assets/144870486/45bca7f0-571d-4a3c-8f1b-ab8897f287f1)
 
 
 ## Result:
