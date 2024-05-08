@@ -24,8 +24,7 @@ Program to implement the SVM For Spam Mail Detection..
 Developed by: CHANDRAPRIYADHARSHINI C
 RegisterNumber:  212223240019
 */
-```
-```
+
 import pandas as pd
 data=pd.read_csv("/content/spam.csv",encoding='Windows-1252')
 from sklearn.model_selection import train_test_split
